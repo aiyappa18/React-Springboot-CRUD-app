@@ -19,7 +19,7 @@ export default function EditUser() {
         setUser({...user,[e.target.name]:e.target.value});//spread oprator since we have to add many users
     };
     useEffect(()=>{
-    loadUser()},[]);
+    loadUser()},[]); // when the page loads we load the users
 
     const onSubmit= async (e)=>{
    e.preventDefault(); //if we dont use prevent default then whenever we post the data in the form the data would be displayed in the URL

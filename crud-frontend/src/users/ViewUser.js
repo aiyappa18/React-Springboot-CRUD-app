@@ -12,10 +12,10 @@ export default function ViewUser() {
     const {id}=useParams();
 
     useEffect(()=>{
-      loadUsers()
+      loadUsers() //load the users  when this component is first loaded
     },[])
     const loadUsers=async ()=>{
-        const result=await axios.get(`http://localhost:8080/user/${id}`)
+        const result=await axios.get(`http://localhost:8080/user/${id}`) 
         setUser(result.data)
     }
   return (

@@ -21,7 +21,7 @@ export default function AddUser() {
     const onSubmit= async (e)=>{
    e.preventDefault(); //if we dont use prevent default then whenever we post the data in the form the data would be displayed in the URL
    await axios.post("http://localhost:8080/user",user)
-   navigate("/") //after submit the page shoukd navigate to the home page
+   navigate("/") //after submitting the page should navigate to the home page
     };
 
   return (
@@ -30,6 +30,7 @@ export default function AddUser() {
             <div className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow">
                 <h2 className="text-centre m-4">Register User</h2>
                 <form onSubmit={(e)=>onSubmit(e)}>
+                {/* on submission we want to handle the data that was entered in the form and send it to the server for saving  */}
                 <div className="mb-3">
                     <label htmlFor="Name" className="form-label">
                         Name
