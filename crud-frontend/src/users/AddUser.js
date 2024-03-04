@@ -65,7 +65,8 @@ export default function AddUser() {
                     onChange={(e)=>onInputChange(e)}></input>
                 </div>
                
-                <button type="submit" className="btn btn-outline-primary">Submit</button>
+                <button type="submit" className="btn btn-outline-primary">Submit</button> 
+                {/* when we submit the form we need to send the data to the backend to send it to the server */}
                 <Link  className="btn btn-outline-danger mx-2" to="/">Cancel</Link>
                 </form>
             </div>
